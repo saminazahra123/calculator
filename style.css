@@ -13,3 +13,16 @@ body{
     background: linear-gradient(to left, rgb(0, 0, 0), rgb(87, 86, 86));
 
 }
+.claculator{
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background-color: transparent;
+    box-shadow: 0px 3px  15px rgba(113, 115, 119, 0.5);
+}
+input{
+    width: 100%;
+    border: none;
+    padding: 24px;
+    margin: 10px;
+}
