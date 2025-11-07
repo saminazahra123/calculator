@@ -35,5 +35,14 @@ input::placeholder{
     color: #ffffff;
 }
 button{
-
+border: none;
+width: 60px;
+height: 60px;
+margin: 10px;
+border-radius: 50%;
+background: transparent;
+color: #ffffff;
+font-size: 20px;
+box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+cursor: pointer;
 }
