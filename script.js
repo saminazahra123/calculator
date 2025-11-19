@@ -1,60 +1,27 @@
-// let input = document.getElementById("inputbox");
-// let buttons = document.querySelectorAll("button");
-
-// let string = "";
-// let arr = Array.from(buttons);
-// arr.forEach(button =>{
-//     button.addEventListener('click', (e) =>{
-//         if (e.target.innerHTML == " "){
-//             string = eval(string);
-//             input.value = string;
-//         }
-//         string += e.target.innerHTML;
-//         input.value = string ;
-//     })
-// })
-
-
-
-// let input = document.getElementById("inputbox");
-// let buttons = document.querySelectorAll("button");
-
-// let string = "";
-// let arr = Array.from(buttons);
-
-// arr.forEach(button => {
-//     button.addEventListener('click', (e) => {
-//         if (e.target.innerHTML == "=") {
-//             string = eval(string);
-//             input.value = string;
-//         } else if (e.target.innerHTML == "C") {
-//             string = "";
-//             input.value = string;
-//         } else {
-//             string += e.target.innerHTML;
-//             input.value = string;
-//         }
-//     });
-// });
 let input = document.getElementById("inputbox");
 let buttons = document.querySelectorAll("button");
 
 let string = "";
-let arr = Array.from(buttons);
-arr.forEach(button => {
+
+buttons.forEach(button => {
   button.addEventListener('click', (e) => {
-    if (e.target.innerHTML == "=") {
+    let value = e.target.innerHTML.toUpperCase().trim();
+
+    if (value === "=") {
       string = eval(string);
       input.value = string;
-    } else if (e.target.innerHTML == "AC") {
+
+    } else if (value === "AC") {
       string = "";
       input.value = string;
-    } else if (e.target.innerHTML == "DEL") {
+
+    } else if (value === "DEL") {
       string = string.slice(0, -1);
       input.value = string;
+
     } else {
-      string += e.target.innerHTML;
+      string += e.target.innerHTML; 
       input.value = string;
-    }
-  });
+    }
+  });
 });
